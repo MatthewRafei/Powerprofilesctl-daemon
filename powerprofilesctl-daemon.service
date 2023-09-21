@@ -1,0 +1,12 @@
+[Unit]
+Description=Power Profiles Control Daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/oddstap/.local/bin/powerprofilesctl-daemon.py
+#WorkingDirectory=/path/to/your/script/directory
+Restart=always
+#User=oddstap
+
+[Install]
+WantedBy=multi-user.target
